@@ -16,13 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (display == 'none') {
 			$('.hamburger').addClass('is-active');
 			$('.header-nav__content').slideDown(400);
+			if ($(window).scrollTop() == 0) {
+				$('.header-nav').addClass('header-nav--scroll');
+				$('.nav-main').addClass('active');
+			}
 		}
 		if (display == 'block') {
 			close_nav();
+			if ($(window).scrollTop() == 0) {
+				$('.header-nav').removeClass('header-nav--scroll');
+				$('.nav-main').removeClass('active');
+			}
 		}
-	}
-	);
+	});
 	// ------------------- Page scrolling functions -------------------
+	let width = $(window).width();
 
 	$('.nav-main').click(() => {
 		$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
@@ -56,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	$(window).scroll(() => {
-		let width = $(window).width();
 		let height = $(window).scrollTop();
 		let scroll_about = $('.about').offset().top;
 		let scroll_skills = $('.skills').offset().top;
