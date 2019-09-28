@@ -1,11 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-	// ------------------- Input Mask -------------------
-	// $('.contact__input-phone').inputmask({ "mask": "+7(999)999-99-99" });
+	// -------------------------- Input Mask --------------------------
+	$('.contact__input-phone').inputmask({ "mask": "+7(999)999-99-99" });
+	// -------------------- Hamburger & Navigation --------------------
+	let close_nav = function () {
+		$('.hamburger').removeClass('is-active');
+		$('.header-nav__content').slideUp(400);
+	};
+
+	$('.hamburger').click(() => {
+		let elem = $('.header-nav__content');
+		let display = elem.css('display');
+		console.log(elem);
+		console.log(display);
+		if (display == 'none') {
+			$('.hamburger').addClass('is-active');
+			$('.header-nav__content').slideDown(400);
+		}
+		if (display == 'block') {
+			close_nav();
+		}
+	}
+	);
 	// ------------------- Page scrolling functions -------------------
 	$(window).scroll(() => {
+		let width = $(this).width();
 		let height = $(this).scrollTop();
-		if (height > 50) {
+		if (height > 1) {
 			$('.header-nav').addClass('header-nav--scroll');
 			$('.nav-main').addClass('active');
 		} else {
@@ -13,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		};
 
 		let scroll_about = $('.about').offset().top;
-		console.log(scroll_about);
 		if (height > scroll_about - 200) {
 			$('.nav-main').removeClass('active');
 			$('.nav-about').addClass('active');
@@ -45,18 +65,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		$('.nav-main').click(() => {
 			$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
+			if (width < 768) {
+				close_nav();
+			}
 		});
 		$('.nav-about').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_about }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_about - 50 }, 1000, 'swing');
+			if (width < 768) {
+				close_nav();
+			}
 		});
 		$('.nav-skills').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_skills }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_skills - 50 }, 1000, 'swing');
+			if (width < 768) {
+				close_nav();
+			}
 		});
 		$('.nav-portfolio').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_portfolio }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_portfolio - 50 }, 1000, 'swing');
+			if (width < 768) {
+				close_nav();
+			}
 		});
 		$('.nav-contact').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_contact }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_contact - 50 }, 1000, 'swing');
+			if (width < 768) {
+				close_nav();
+			}
 		});
 
 

@@ -132,6 +132,22 @@ a {
 .header {
   align-items: center;
   background-color: $dark-grey;
+  &__hamburger {
+    display: block;
+    display: none;
+    margin-left: auto;
+    margin-top: 3px;
+    outline: none;
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
   &::after {
     content: '';
     position: absolute;
@@ -157,6 +173,12 @@ a {
       padding-top: 20px;
       padding-bottom: 20px;
     }
+    &__content {
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        display: none;
+      }
+    }
     &--scroll {
       padding-top: 5px;
       padding-bottom: 5px;
@@ -166,6 +188,7 @@ a {
       justify-content: space-between;
       padding: 0 15px;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
     }
     &__logo {
@@ -184,9 +207,7 @@ a {
       margin: 0;
       padding: 0;
       list-style-type: none;
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
+      text-align: center;
     }
     &__item {
       color: #fff;
@@ -194,7 +215,13 @@ a {
       display: inline-block;
       position: relative;
       padding: $gutter*0.5 $gutter*0.5;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100px;
       cursor: pointer;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
       &:hover {
         text-decoration: none;
         color: #fff;
@@ -350,6 +377,9 @@ a {
   &__work-table {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $gutter;
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   &__work {
     display: flex;
@@ -362,6 +392,9 @@ a {
     text-align: center;
     height: 250px;
     transition: all .3s ease;
+    &-1 {
+      background-image: url(../img/@1x/Beauty-saloon.jpg);
+    }
     &-header {
       z-index: 3;
       font-weight: 700;

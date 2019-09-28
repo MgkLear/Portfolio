@@ -5,6 +5,12 @@ $light-grey: #3a3a3a;
 $dark-grey: #252525;
 $overlay-color: #000;
 
+
+$hamburger-layer-color: $text;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 6px;
+$hamburger-padding-y: 8px;
+
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
