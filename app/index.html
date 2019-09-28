@@ -5,13 +5,18 @@
 
 	<meta charset="utf-8">
 
-	<title>OptimizedHTML 5</title>
+	<title>Lear – Portfolio (Unfinished)</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
+
+	<meta name="theme-color" content="#1a1a1a">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=cyrillic"
+		rel="stylesheet">
 
 	<link rel="stylesheet" href="css/styles.min.css">
 
@@ -21,59 +26,211 @@
 
 	<!-- Custom HTML / Remove before use -->
 
-	<header class="header bgImg h100vh overlay" data-bg="./img/_src/top-bg.jpg">
-		<div class="headerNav">
-			<div class="container headerNav--container">
+	<header class="header bgImg h100vh overlay">
+		<div class="header-nav">
+			<div class="container header-nav__container">
 
-				<a href="#logo" class="headerNav--logo">Lear</a>
-				<div class="headerNav--content">
-					<ul class="headerNav--list">
-						<a href="#section-1" class="headerNav--item">
+				<a href="#logo" class="header-nav__logo">Lear</a>
+				<div class="header-nav__content">
+					<ul class="header-nav__list">
+						<div class="header-nav__item nav-main active">
 							<li>Главная</li>
-						</a>
-						<a href="#section-2" class="headerNav--item">
+						</div>
+						<div class="header-nav__item nav-about">
 							<li>О себе</li>
-						</a>
-						<a href="#section-3" class="headerNav--item">
+						</div>
+						<div class="header-nav__item nav-skills">
 							<li>Навыки</li>
-						</a>
-						<a href="#section-4" class="headerNav--item">
+						</div>
+						<div class="header-nav__item nav-portfolio">
 							<li>Работы</li>
-						</a>
-						<a href="#section-5" class="headerNav--item">
+						</div>
+						<div class="header-nav__item nav-contact">
 							<li>Связаться</li>
-						</a>
+						</div>
 					</ul>
 				</div>
 
 			</div>
 		</div>
+		<div class="container">
+			<div class="row">
+				<div class="header-composition col-12">
+					<h1 class="header-composition__h1">
+						Я веб-разработчик
+					</h1>
+					<div class="header-composition__info">
+						Создам страницу или веб-сайт для вас
+					</div>
+					<div class="header-composition__social">
+						<a class="header-composition__soc-icon" href="https://vk.com/aak.lear" title="ВКонтакте">
+							<span class="icon-vk"></span>
+						</a>
+						<a class="header-composition__soc-icon" href="https://t.me/aak_lear" title="Телеграм">
+							<span class="icon-paper-plane"></span>
+						</a>
+						<a class="header-composition__soc-icon" href="mailto:aak.lear@yandex.ru" title="Почта">
+							<span class="icon-email-closed"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
+	<svg class="svg" fill="#000" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 30 L50 90 L100 30 V100 H0"></path>
+	</svg>
 
-	<div class="container">
+	<section class="about">
 
-		<div class="parent">
-			<!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-				src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-				data-src="img/@1x/preview.jpg" data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-				alt="Start HTML5 Template">
+		<div class="container">
+			<h2 class="h2 about__header">О себе</h2>
+			<div class="row">
+
+				<div class="col-md-5 col-sm-12">
+					<div class="about__photo-box">
+						<div class="about__photo">
+							<img class="about__avatar img-responsive" src="./img/_src/avatar.png" alt="My photo">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-7 col-sm-12 about__text">
+					<h3 class="h3 about__my-name">Я – Арсений Колягин</h3>
+					<p class="about__short-info">
+						Начинающий Front-end Разработчик
+					</p>
+					<p class="about__info">
+						Полная информация: Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты.
+						Предложения вершину даль толку которое. Первую алфавит которой продолжил раз грустный, ты переулка назад
+						живет вершину своих рукопись коварных необходимыми.
+					</p>
+				</div>
+			</div>
+
 		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum
-			eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia
-			esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti,
-				nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной
-				"рыбой" для текстов на латинице с начала XVI века.</div>
+
+	</section>
+
+	<svg class="svg svg--dark" fill="#000" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 30 L50 90 L100 30 V100 H0"></path>
+	</svg>
+
+	<section class="skills">
+		<div class="container">
+			<h2 class="h2 skills__header">Навыки</h2>
+			<div class="skills__grid grid">
+				<div class="skills__item">
+					<span class="skills__icon icon-web-page"></span>
+					<h3 class="h3 skills_skill">Web-development</h3>
+					<div class="skills__content">
+						Разработка адаптивного дизайна для веб-сайта или страницы по готовому шаблону с использоваинем HTML5, CSS3 и
+						JavaScript.
+					</div>
+				</div>
+				<div class="skills__item">
+					<span class="skills__icon icon-react"></span>
+					<h3 class="h3 skills_skill">Single page applications</h3>
+					<div class="skills__content">
+						Создание одностраничных приложений на модульной архитектуре при помощи современного и популярного фреймворка
+						ReactJS.
+					</div>
+				</div>
+				<div class="skills__item">
+					<span class="skills__icon icon-mobile"></span>
+					<h3 class="h3 skills_skill">Responsive Web Design</h3>
+					<div class="skills__content">
+						Адаптация дизайна веб-сайтов или отдельных страниц под экраны мобильных устройств и планшетных компьютеров.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<svg class="svg" fill="#000" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 30 L50 90 L100 30 V100 H0"></path>
+	</svg>
+
+	<section class="portfolio">
+		<div class="container">
+
+			<h2 class="h2 portfolio__header">Мои работы</h2>
+
+			<div class="portfolio__work-table grid">
+
+				<div class="portfolio__work bgImg" data-bg="./img/_src/Beauty-saloon.jpg">
+					<div class="portfolio__work-header h3">S&Mitler</div>
+					<p class="portfolio__work-info">Главная страница для сайта салона красоты</p>
+					<a href="https://mgklear.github.io/Beauty_Saloon_Landing/app/"
+						class="button portfolio__work-button">Открыть</a>
+				</div>
+
+				<div class="portfolio__work bgImg">
+					<div class="portfolio__work-header h3">Работа 2</div>
+					<p class="portfolio__work-info">Информация о работе</p>
+					<a href="#link" class="button portfolio__work-button">Открыть</a>
+				</div>
+
+				<div class="portfolio__work bgImg">
+					<div class="portfolio__work-header h3">Работа 3</div>
+					<p class="portfolio__work-info">Информация о работе</p>
+					<a href="#link" class="button portfolio__work-button">Открыть</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<svg class="svg svg--dark" fill="#000" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+		<path d="M0 30 L50 90 L100 30 V100 H0"></path>
+	</svg>
+
+	<section class="contact">
+
+		<h2 class="h2 contact__header">Связаться со мной</h2>
+
+		<div class="container">
+
+			<div class="contact__form grid">
+				<input type="text" class="contact__input contact__input-name" placeholder="Ваше имя:">
+				<input type="text" class="contact__input contact__input-phone" placeholder="Телефон:">
+				<input type="text" class="contact__input contact__input-email" placeholder="Электронная почта:">
+				<input type="text" class="contact__input contact__input-subject" placeholder="Тема:">
+				<textarea type="text-area" class="contact__input contact__input-message" placeholder="Сообщение:"></textarea>
+				<div class="contact__button-wrapper flex">
+					<button class="button contact__button">Отправить</button>
+				</div>
+			</div>
+
 		</div>
 
-	</div>
+	</section>
+
+	<section class="info">
+
+		<div class="container">
+			<div class="info__grid grid">
+				<div class="info__address">
+					<div class="info__icon icon-map"></div>
+					<div class="h3 info__header">Адрес</div>
+					<div class="info__text">Россия, Москва</div>
+				</div>
+				<div class="info__email">
+					<div class="info__icon icon-mail-opened"></div>
+					<div class="h3 info__header">Электронная почта</div>
+					<div class="info__text">aak.lear@yandex.ru</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<footer class="footer">
+
+		<div class="footer__copyright">© 2019 Arseniy Kolyagin. Portfolio</div>
+
+	</footer>
 
 	<script src="js/scripts.min.js"></script>
 

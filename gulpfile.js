@@ -12,7 +12,7 @@ var gulp = require("gulp"),
   del = require("del");
 
 // Local Server
-gulp.task("browser-sync", function() {
+gulp.task("browser-sync", function () {
   browserSync({
     server: {
       baseDir: "app"
@@ -28,7 +28,7 @@ function bsReload(done) {
 }
 
 // Custom Styles
-gulp.task("styles", function() {
+gulp.task("styles", function () {
   return gulp
     .src("app/scss/**/*.scss")
     .pipe(
@@ -50,10 +50,11 @@ gulp.task("styles", function() {
 });
 
 // Scripts & JS Libraries
-gulp.task("scripts", function() {
+gulp.task("scripts", function () {
   return gulp
     .src([
-      // 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+      "node_modules/jquery/dist/jquery.min.js", // Optional jQuery plug-in (npm i --save-dev jquery)
+      "node_modules/inputmask/dist/jquery.inputmask.bundle.js", // Optional jQuery plug-in (npm i --save-dev jquery)
       "app/js/_libs.js", // JS libraries (all in one)
       "app/js/_custom.js" // Custom scripts. Always at the end
     ])
@@ -67,7 +68,7 @@ gulp.task("scripts", function() {
 var quality = 95; // Responsive images quality
 
 // Produce @1x images
-gulp.task("img-responsive-1x", async function() {
+gulp.task("img-responsive-1x", async function () {
   return gulp
     .src("app/img/_src/**/*.{png,jpg,jpeg,webp,raw}")
     .pipe(newer("app/img/@1x"))
@@ -76,18 +77,18 @@ gulp.task("img-responsive-1x", async function() {
         "**/*": { width: "50%", quality: quality }
       })
     )
-    .on("error", function(e) {
+    .on("error", function (e) {
       console.log(e);
     })
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         path.extname = path.extname.replace("jpeg", "jpg");
       })
     )
     .pipe(gulp.dest("app/img/@1x"));
 });
 // Produce @2x images
-gulp.task("img-responsive-2x", async function() {
+gulp.task("img-responsive-2x", async function () {
   return gulp
     .src("app/img/_src/**/*.{png,jpg,jpeg,webp,raw}")
     .pipe(newer("app/img/@2x"))
@@ -96,11 +97,11 @@ gulp.task("img-responsive-2x", async function() {
         "**/*": { width: "100%", quality: quality }
       })
     )
-    .on("error", function(e) {
+    .on("error", function (e) {
       console.log(e);
     })
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         path.extname = path.extname.replace("jpeg", "jpg");
       })
     )
@@ -112,17 +113,17 @@ gulp.task(
 );
 
 // Clean @*x IMG's
-gulp.task("cleanimg", function() {
+gulp.task("cleanimg", function () {
   return del(["app/img/@*"], { force: true });
 });
 
 // Code & Reload
-gulp.task("code", function() {
+gulp.task("code", function () {
   return gulp.src("app/**/*.html").pipe(browserSync.reload({ stream: true }));
 });
 
 // Deploy
-gulp.task("rsync", function() {
+gulp.task("rsync", function () {
   return gulp.src("app/").pipe(
     rsync({
       root: "app/",
@@ -138,7 +139,7 @@ gulp.task("rsync", function() {
   );
 });
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   gulp.watch("app/scss/**/*.scss", gulp.parallel("styles"));
   gulp.watch(
     ["app/js/_custom.js", "app/js/_libs.js"],
