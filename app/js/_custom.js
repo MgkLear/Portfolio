@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 	// ------------------- Input Mask -------------------
-	$('.contact__input-phone').inputmask({ "mask": "+7(999)999-99-99" });
+	// $('.contact__input-phone').inputmask({ "mask": "+7(999)999-99-99" });
 	// ------------------- Page scrolling functions -------------------
 	$(window).scroll(() => {
 		let height = $(this).scrollTop();
@@ -47,16 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
 		});
 		$('.nav-about').click(() => {
-			$('html, body').stop().animate({ scrollTop: $('.about').offset().top }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_about }, 1000, 'swing');
 		});
 		$('.nav-skills').click(() => {
-			$('html, body').stop().animate({ scrollTop: $('.skills').offset().top }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_skills }, 1000, 'swing');
 		});
 		$('.nav-portfolio').click(() => {
-			$('html, body').stop().animate({ scrollTop: $('.portfolio').offset().top }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_portfolio }, 1000, 'swing');
 		});
 		$('.nav-contact').click(() => {
-			$('html, body').stop().animate({ scrollTop: $('.contact').offset().top }, 1000, 'swing');
+			$('html, body').stop().animate({ scrollTop: scroll_contact }, 1000, 'swing');
 		});
 
 
