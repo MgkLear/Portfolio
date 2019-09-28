@@ -23,9 +23,45 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	);
 	// ------------------- Page scrolling functions -------------------
+
+	$('.nav-main').click(() => {
+		$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
+		if (width < 768) {
+			close_nav();
+		}
+	});
+	$('.nav-about').click(() => {
+		$('html, body').stop().animate({ scrollTop: $('.about').offset().top - 50 }, 1000, 'swing');
+		if (width < 768) {
+			close_nav();
+		}
+	});
+	$('.nav-skills').click(() => {
+		$('html, body').stop().animate({ scrollTop: $('.skills').offset().top - 50 }, 1000, 'swing');
+		if (width < 768) {
+			close_nav();
+		}
+	});
+	$('.nav-portfolio').click(() => {
+		$('html, body').stop().animate({ scrollTop: $('.portfolio').offset().top - 50 }, 1000, 'swing');
+		if (width < 768) {
+			close_nav();
+		}
+	});
+	$('.nav-contact').click(() => {
+		$('html, body').stop().animate({ scrollTop: $('.contact').offset().top - 50 }, 1000, 'swing');
+		if (width < 768) {
+			close_nav();
+		}
+	});
+
 	$(window).scroll(() => {
-		let width = $(this).width();
-		let height = $(this).scrollTop();
+		let width = $(window).width();
+		let height = $(window).scrollTop();
+		let scroll_about = $('.about').offset().top;
+		let scroll_skills = $('.skills').offset().top;
+		let scroll_portfolio = $('.portfolio').offset().top;
+		let scroll_contact = $('.contact').offset().top;
 		if (height > 1) {
 			$('.header-nav').addClass('header-nav--scroll');
 			$('.nav-main').addClass('active');
@@ -33,67 +69,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			$('.header-nav').removeClass('header-nav--scroll');
 		};
 
-		let scroll_about = $('.about').offset().top;
 		if (height > scroll_about - 200) {
 			$('.nav-main').removeClass('active');
 			$('.nav-about').addClass('active');
 		} else {
 			$('.nav-about').removeClass('active');
 		}
-		let scroll_skills = $('.skills').offset().top;
 		if (height > scroll_skills - 200) {
 			$('.nav-about').removeClass('active');
 			$('.nav-skills').addClass('active');
 		} else {
 			$('.nav-skills').removeClass('active');
 		}
-		let scroll_portfolio = $('.portfolio').offset().top;
 		if (height > scroll_portfolio - 200) {
 			$('.nav-skills').removeClass('active');
 			$('.nav-portfolio').addClass('active');
 		} else {
 			$('.nav-portfolio').removeClass('active');
 		}
-		let scroll_contact = $('.contact').offset().top;
 		if (height > scroll_contact - 200) {
 			$('.nav-portfolio').removeClass('active');
 			$('.nav-contact').addClass('active');
 		} else {
 			$('.nav-contact').removeClass('active');
 		}
-
-
-		$('.nav-main').click(() => {
-			$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
-			if (width < 768) {
-				close_nav();
-			}
-		});
-		$('.nav-about').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_about - 50 }, 1000, 'swing');
-			if (width < 768) {
-				close_nav();
-			}
-		});
-		$('.nav-skills').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_skills - 50 }, 1000, 'swing');
-			if (width < 768) {
-				close_nav();
-			}
-		});
-		$('.nav-portfolio').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_portfolio - 50 }, 1000, 'swing');
-			if (width < 768) {
-				close_nav();
-			}
-		});
-		$('.nav-contact').click(() => {
-			$('html, body').stop().animate({ scrollTop: scroll_contact - 50 }, 1000, 'swing');
-			if (width < 768) {
-				close_nav();
-			}
-		});
-
 
 		$('.header').css({
 			"top": (height / 2) + "px"
