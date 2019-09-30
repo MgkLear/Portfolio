@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 	// -------------------------- Input Mask --------------------------
-	$('.contact__input-phone').inputmask({ "mask": "+7(999)999-99-99" });
+	$('.contact__input-phone').inputmask({ "mask": "+7 (999) 999-99-99" });
 	// -------------------- Hamburger & Navigation --------------------
 	let close_nav = function () {
 		$('.hamburger').removeClass('is-active');
@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			$('.nav-contact').removeClass('active');
 		}
+
 
 		$('.header').css({
 			"top": (height / 2) + "px"

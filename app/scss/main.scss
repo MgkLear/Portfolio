@@ -127,6 +127,7 @@ a {
   height: auto;
 }
 
+
 // Custom Scss / Remove before use
 
 .header {
@@ -396,6 +397,7 @@ a {
       background-image: url(../img/@1x/Beauty-saloon.jpg);
     }
     &-header {
+      visibility: hidden;
       z-index: 3;
       font-weight: 700;
       font-size: 20px;
@@ -403,6 +405,7 @@ a {
       transition: all .3s ease;
     }
     &-info {
+      visibility: hidden;
       z-index: 3;
       padding: 10px 0;
       font-weight: 500;
@@ -411,6 +414,7 @@ a {
       transition: all .3s ease;
     }
     &-button {
+      visibility: hidden;
       z-index: 3;
       font-weight: 500;
       color: rgba($text, .8);
@@ -439,11 +443,11 @@ a {
         padding-top: 5px;
       }
       .portfolio__work-header, .portfolio__work-info, .portfolio__work-button {
+        visibility: visible;
         opacity: 1;
       }
     }
   }
- 
 }
 .contact {
   margin-top: -25px;

@@ -7,6 +7,9 @@ $overlay-color: #000;
 
 
 $hamburger-layer-color: $text;
+$hamburger-hover-opacity: 1;
+$hamburger-active-layer-color: $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
 $hamburger-layer-height: 2px;
 $hamburger-layer-spacing: 6px;
 $hamburger-padding-y: 8px;
