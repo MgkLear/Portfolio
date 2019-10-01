@@ -258,7 +258,7 @@ a {
         line-height: 1.8;
       }
       @include media-breakpoint-down(xs) {
-        font-size: 32px;
+        font-size: 28px;
         line-height: 2;
       }
     }
@@ -320,6 +320,7 @@ a {
     color: rgba($text, .8);
     text-align: justify;
     @include media-breakpoint-down(sm) {
+      font-size: 14px;
       padding: 0 $gutter;
     }
   }
@@ -339,6 +340,9 @@ a {
     margin-bottom: 0;
     line-height: 1.2;
     color: $text;
+    @include media-breakpoint-down(xs) {
+      font-size: 24px;
+    }
   }
 }
 .skills {
@@ -421,6 +425,17 @@ a {
       font-weight: 700;
       opacity: 0;
       transition: all .3s ease;
+      &.disabled {
+        border-color: $light-grey;
+        color: $light-grey;
+        cursor: default;
+        &:hover {
+        background-color: transparent;
+        border-color: $light-grey;
+        color: $light-grey;
+        cursor: default;
+      }
+      }
     }
     &::before {
       content: '';
