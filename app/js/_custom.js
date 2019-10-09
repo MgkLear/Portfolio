@@ -63,6 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 
+	//E-mail Ajax Send
+	$("form.contact__form").submit(function () { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "./mail.php", //Change
+			data: th.serialize()
+		}).done(function () {
+			alert("Thank you!");
+			setTimeout(function () {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 	$(window).scroll(() => {
 		let height = $(window).scrollTop();
 		let scroll_about = $('.about').offset().top;

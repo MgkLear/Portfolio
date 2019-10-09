@@ -205,16 +205,25 @@
 
 		<div class="container">
 
-			<div class="contact__form grid">
-				<input type="text" class="contact__input contact__input-name" placeholder="Ваше имя:">
-				<input type="text" class="contact__input contact__input-phone" placeholder="Телефон:">
-				<input type="text" class="contact__input contact__input-email" placeholder="Электронная почта:">
-				<input type="text" class="contact__input contact__input-subject" placeholder="Тема:">
-				<textarea type="text-area" class="contact__input contact__input-message" placeholder="Сообщение:"></textarea>
+			<form class="contact__form grid">
+
+				<input name="name" type="text" class="contact__input contact__input-name" placeholder="Ваше имя:" required>
+				<input name="phone" type="text" class="contact__input contact__input-phone" placeholder="Телефон:">
+				<input name="email" type="text" class="contact__input contact__input-email" placeholder="Электронная почта:"
+					required>
+				<input name="subject" type="text" class="contact__input contact__input-subject" placeholder="Тема:">
+				<textarea name="message" type="text-area" class="contact__input contact__input-message" placeholder="Сообщение:"
+					required></textarea>
 				<div class="contact__button-wrapper flex">
-					<button class="button contact__button">Отправить</button>
+					<button type="submit" class="button contact__button">Отправить</button>
 				</div>
-			</div>
+
+				<!-- Hidden Required Feilds -->
+				<input type="hidden" name="project_name" value="Portfolio">
+				<input type="hidden" name="admin_email" value="mgk.lear@gmail.com">
+				<input type="hidden" name="form_subject" value="Обратная связь со страницы Портфолио">
+				<!-- END Hidden Required Fields -->
+			</form>
 
 		</div>
 
