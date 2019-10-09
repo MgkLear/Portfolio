@@ -5,4 +5,4 @@
 	<img src="https://github.com/MgkLear/Portfolio_Project/blob/master/app/img/%401x/bg-top.jpg">
 </p>
 
-<h3><a href="https://mgklear.github.io/Portfolio_Project/app/">Click here</a> to see the portfolio page.</h3>
+<h3><a href="https://mgklear.github.io/Portfolio/app/">Click here</a> to see the portfolio page.</h3>
