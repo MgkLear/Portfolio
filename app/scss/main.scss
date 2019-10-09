@@ -379,6 +379,9 @@ a {
   background-color: $light-grey;
   margin-top: -25px;
   padding-bottom: 140px;
+  &__info {
+    text-align: justify;
+  }
   &__work-table {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $gutter;
