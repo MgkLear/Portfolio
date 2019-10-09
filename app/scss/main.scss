@@ -472,6 +472,9 @@ a {
   position: relative;
   z-index: 3;
   background-color: $dark-grey;
+  &__warning {
+    color: rgb(201, 70, 70);
+  }
   &__form {
     grid-template-columns: 1fr 1fr;
     grid-gap: $gutter;
